@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="project2.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+
+  <title>Hello, world!</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light main-color">
+    <div class="container">
+      <a class="navbar-brand" href="#">My Coach2 U</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Coach</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Clients</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Gym</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hi, Amir</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Add Content
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">Add Coach</a>
+              <a class="dropdown-item" href="#">Add Client</a>
+              <a class="dropdown-item" href="#">Add Gym</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-dark text-light py-4 mb-3">
+    <div class="container">
+      <h1><i class="fas fa-cog"></i>Dashboard <small class="text-secondary">MyCoach2U</small></h1>
+    </div>
+  </header>
+
+  <section id="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">Dashboard</div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="fas fa-user"></i>My Coach<span class="badge badge-primary badge-pill">5</span></li>
+              <li class="list-group-item"><i class="fas fa-dollar-sign"></i>My Client<span class="badge badge-primary badge-pill">32</span></i>My Client</li></li>
+              <li class="list-group-item"><i class="fas fa-home"></i>My Gym<span class="badge badge-primary badge-pill">16</span></i>My Client</li></li>
+            </ul>
+            <div class="card well mt-3">
+              <div class="card-body">
+                <h2>Disk space used</h2>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                </div>
+                <h2>Memory used</h2>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-9">
+          <div class="card">
+            <h5 class="card-header">Quick Overview</h5>
+            <div class="row">
+              <div class="col-3">
+                <div class="card well">
+                  <div class="card-body text-center">
+                    <h3><i class="fas fa-home"></i></h3>
+                    <h3>100</h3> 
+                    <p>Gyms</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card well">
+                  <div class="card-body text-center">
+                    <h3><i class="fas fa-dollar-sign"></i></h3>
+                    <h3>5000</h3> 
+                    <p>Revenue</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card well">
+                  <div class="card-body text-center">
+                    <h3><i class="fas fa-user"></i></h3>
+                    <h3>52</h3> 
+                    <p>Online</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card well">
+                  <div class="card-body text-center">
+                    <h3><i class="fas fa-chart-bar"></i></h3>
+                    <h3>13224</h3> 
+                    <p>Monthly users</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <h5 class="card-header">Latest Booking</h5>
+            <div class="card-body">
+              <table class="table" border="1" id="myTable">
+                <thead>
+                  <th>Customer Name</th>
+                  <th>Coach Name</th>
+                  <th>Price</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Abby</td>
+                    <td>Bobo</td>
+                    <td>RM 50</td>
+                  </tr>
+                  <tr>
+                    <td>Toby</td>
+                    <td>Bobo</td>
+                    <td>RM 25</td>
+                  </tr>
+                  <tr>
+                    <td>Nikki</td>
+                    <td>Yuchin</td>
+                    <td>RM 70</td>
+                  </tr>
+                  <tr>
+                    <td>Jac</td>
+                    <td>Yuchin</td>
+                    <td>RM 150</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="text-center bg-dark text-light py-4">
+      &copy; Copyright 2017 - AmirArtz
+  </footer>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Coach Name</label>
+    <input type="text" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Enter Name">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Coach Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Short Description</label>
+    <textarea class="form-control" id="exampleFormControlDesc1" row="5"></textarea> 
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Upload Image</label>
+    <input type="file" class="form-control-file" id="exampleInputEmail1" placeholder="Enter Email">
+    <small id="emailHelp" class="form-text text-muted">JPG and PNG only</small>
+  </div>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/10.0.1/classic/ckeditor.js"></script>
+    <script>
+    ClassicEditor
+        .create( document.querySelector('#exampleFormControlDesc1') )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+
+<script>
+  $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
+</body>
+</html>
